@@ -17,11 +17,21 @@
   <body>
     <div class="search-container">
       <input
-        type="text"
+        list="car-numbers"
         class="search-bar"
         placeholder="Enter Car Number..."
         id="search-box"
       />
+
+      <datalist id="car-numbers">
+        <option value="GJ03EC0101">GJ03EC0101</option>
+        <option value="GJ03CE1484">GJ03CE1484</option>
+        <option value="GJ03JC9294">GJ03JC9294</option>
+        <option value="GJ03AD0303">GJ03AD0303</option>
+        <option value="GJ03KA5700">GJ03KA5700</option>
+        <option value="GJ03JR2798">GJ03JR2798</option>
+        <option value="GJ03JJ3699">GJ03JJ3699</option>
+      </datalist>
       <button class="search-icon" onclick="searchCar()">🔍</button>
     </div>
 
