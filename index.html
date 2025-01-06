@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Search Car</title>
+  </head>
+  <body>
+    <div class="search-container">
+      <input
+        type="text"
+        class="search-bar"
+        placeholder="Enter Car Number..."
+        id="search-box"
+      />
+      <button class="search-icon" onclick="searchCar()">🔍</button>
+    </div>
+
+    <div class="container" id="parking-plot">
+      <div class="bulb" id="bulb-light-one"></div>
+      <div class="bulb" id="bulb-light-two"></div>
+
+      <div class="content" id="light-one">
+        <img src="/images/street-lamp.png" alt="" />
+      </div>
+
+      <div class="content" id="light-two">
+        <img src="/images/street-lamp.png" alt="" />
+      </div>
+      <div class="content" id="car-2">
+        <img src="/images/car-2.png" alt="" />
+      </div>
+
+      <div class="content" id="car-3">
+        <img src="/images/car-3.png" alt="" />
+      </div>
+
+      <div class="content" id="car-4">
+        <img src="/images/car-6.png" alt="" />
+      </div>
+
+      <div class="content" id="car-5">
+        <img src="/images/car-2.png" alt="" />
+      </div>
+      <div class="content" id="car-6">
+        <img src="/images/car-6.png" alt="" />
+      </div>
+
+      <div class="content" id="car-7">
+        <img src="/images/car-6.png" alt="" />
+      </div>
+
+      <div class="content" id="car-8">
+        <img src="/images/car-6.png" alt="" />
+      </div>
+
+      <div class="content" id="car-9">
+        <img src="/images/car-6.png" alt="" />
+      </div>
+      <div class="content" id="car-10">
+        <img src="/images/car-3.png" alt="" />
+      </div>
+      <div class="content" id="car-11">
+        <img src="/images/car-2.png" alt="" />
+      </div>
+      <div class="content" id="car-12">
+        <img src="/images/car-2.png" alt="" />
+      </div>
+      <!--  -->
+      <div class="content" id="car-13">
+        <img src="/images/car-5.png" alt="" />
+      </div>
+
+      <div class="content" id="car-14">
+        <img src="/images/car-7.png" alt="" />
+      </div>
+
+      <div class="content" id="car-15">
+        <img src="/images/car-9.png" alt="" />
+      </div>
+
+      <div class="content" id="car-16">
+        <img src="/images/car-9.png" alt="" />
+      </div>
+      <div class="content" id="car-17">
+        <img src="/images/car-9.png" alt="" />
+      </div>
+      <div class="content" id="car-18">
+        <img src="/images/car-7.png" alt="" />
+      </div>
+
+      <!--  -->
+
+      <div class="content" id="car-19">
+        <img src="/images/car-12.png" alt="" />
+      </div>
+
+      <div class="content" id="car-20">
+        <img src="/images/car-13.png" alt="" />
+      </div>
+      <div class="content" id="car-21">
+        <img src="/images/car-14.png" alt="" />
+      </div>
+      <div class="content" id="car-22">
+        <img src="/images/car-15.png" alt="" />
+      </div>
+      <div class="content" id="car-23">
+        <img src="/images/car-16.png" alt="" />
+      </div>
+      <div class="content" id="car-24">
+        <img src="/images/car-17.png" alt="" />
+      </div>
+      <div class="content" id="car-25">
+        <img src="/images/car-18.png" alt="" />
+      </div>
+      <div class="content" id="car-26">
+        <img src="/images/car-19.png" alt="" />
+      </div>
+      <div class="content" id="car-27">
+        <img src="/images/car-20.png" alt="" />
+      </div>
+      <div class="content" id="car-28">
+        <img src="/images/van.png" alt="" />
+      </div>
+    </div>
+
+    <div class="switch-container">
+      <div class="switch-icon">
+        <label for="switch"><i class="fa-solid fa-moon"></i></label>
+      </div>
+      <button class="switch" id="switch">Turn On</button>
+    </div>
+    <script>
+      const switchButton = document.getElementById("switch");
+      const parking = document.getElementById("parking-plot");
+      const bulb = document.getElementById("bulb-light-one");
+      const bulb2 = document.getElementById("bulb-light-two");
+
+      switchButton.addEventListener("click", () => {
+        if (parking.classList.contains("on")) {
+          parking.classList.remove("on");
+
+          switchButton.textContent = "Turn On";
+        } else {
+          parking.classList.add("on");
+
+          switchButton.textContent = "Turn Off";
+        }
+
+        if (bulb.classList.contains("on")) {
+          bulb.classList.remove("on");
+
+          switchButton.textContent = "Turn On";
+        } else {
+          bulb.classList.add("on");
+
+          switchButton.textContent = "Turn Off";
+        }
+
+        if (bulb2.classList.contains("on")) {
+          bulb2.classList.remove("on");
+
+          switchButton.textContent = "Turn On";
+        } else {
+          bulb2.classList.add("on");
+
+          switchButton.textContent = "Turn Off";
+        }
+      });
+
+      function searchCar() {
+        searchBox = document.getElementById("search-box");
+        car3 = document.getElementById("car-3");
+        car6 = document.getElementById("car-6");
+        car9 = document.getElementById("car-9");
+        car12 = document.getElementById("car-12");
+        car18 = document.getElementById("car-18");
+        car21 = document.getElementById("car-21");
+        car27 = document.getElementById("car-27");
+
+        if (searchBox.value == "GJ03EC0101") {
+          car12.classList.add("bounce");
+        } else if (searchBox.value == "GJ03CE1484") {
+          car6.classList.add("bounce");
+        } else if (searchBox.value == "GJ03JC9294") {
+          car3.classList.add("bounce");
+        } else if (searchBox.value == "GJ03AD0303") {
+          car9.classList.add("bounce");
+        } else if (searchBox.value == "GJ03KA5700") {
+          car18.classList.add("bounce");
+        } else if (searchBox.value == "GJ03JR2798") {
+          car21.classList.add("bounce");
+        } else if (searchBox.value == "GJ03JJ3699") {
+          car27.classList.add("bounce");
+        } else {
+          alert("Car Not Found");
+        }
+      }
+    </script>
+  </body>
+</html>
